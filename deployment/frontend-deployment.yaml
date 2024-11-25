@@ -15,8 +15,9 @@ spec:
       containers:
       - name: frontend-container
         image: gcr.io/tokyo-ceiling-435523-d0/frontend-app:latest
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8501
+          - containerPort: 8501
 
 ---
 apiVersion: v1
