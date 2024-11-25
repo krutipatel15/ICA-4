@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/tokyo-ceiling-435523-d0/ica4-frontend:$SHORT_SHA', '.' ]
+    args: [ 'build', '-t', 'gcr.io/tokyo-ceiling-435523-d0/ica4-frontend:$SHORT_SHA', './frontend' ]
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/tokyo-ceiling-435523-d0/ica4-frontend:$SHORT_SHA']
   - name: 'gcr.io/cloud-builders/kubectl'
